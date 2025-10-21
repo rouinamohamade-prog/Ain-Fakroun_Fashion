@@ -1,0 +1,71 @@
+:root {
+  --gold: #c99a4b;
+  --dark: #111213;
+  --muted: #6c757d;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: #fff;
+  color: var(--dark);
+  direction: rtl;
+}
+
+.container {
+  max-width: 1000px;
+}
+.product-image {
+  width: 100%;
+  max-width: 500px;  /* أقصى عرض للصورة */
+  margin: 0 auto;    /* لتوسيط الصورة */
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;      /* الحفاظ على نسبة العرض إلى الارتفاع */
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+  transform: scale(1.05);
+  cursor: zoom-in;
+}
+
+h2 {
+  color: var(--dark);
+}
+h4 {
+  color: var(--gold);
+}
+
+form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.btn-dark {
+  background: var(--dark);
+  border: none;
+}
+.btn-dark:hover {
+  background: #333;
+}
+
+/* خيارات المقاس واللون أفقية */
+.size-btn.active, .color-btn.active {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .product-image img:hover {
+    transform: none;
+  }
+  .size-btn, .color-btn {
+    flex: 1 1 45%;
+  }
+}
