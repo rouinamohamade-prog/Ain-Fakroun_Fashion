@@ -7,7 +7,7 @@ const DELIVERY_PRICES = {
 };
 
 // سعر المنتج
-const PRODUCT_PRICE = 820;
+const PRODUCT_PRICE = 1320;
 
 // دالة للحصول على اسم المنتج من الصفحة
 function getProductName() {
@@ -298,4 +298,5 @@ function showToast(msg) {
     toast.classList.remove("show");
     setTimeout(() => toast.remove(), 300);
   }, 2000);
+
 }
