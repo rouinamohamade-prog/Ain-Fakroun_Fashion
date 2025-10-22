@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ain Fakroun Fashion - الصفحة الرئيسية</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- الملف الخاص -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-dark d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Ain Fakroun Fashion" class="me-3" style="height: 55px; width: auto;">
+      Ain Fakroun Fashion
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+      aria-controls="navContent" aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navContent">
+      <!-- باقي الكود يبقى كما هو -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories">المنتجات</a></li>
+        <li class="nav-item"><a class="nav-link" href="#offers">عروض</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+      </ul>
+
+      <!-- Search -->
+      <form id="searchForm" class="d-flex align-items-center me-3" role="search" onsubmit="return false;">
+        <input id="searchInput" class="form-control form-control-sm" type="search" placeholder="ابحث عن منتج..."
+          aria-label="بحث">
+        <button id="searchBtn" class="btn btn-outline-dark btn-sm ms-2" type="button"><i
+            class="bi bi-search"></i></button>
+      </form>
+
+      <!-- Cart -->
+      <div class="d-flex align-items-center">
+        <button id="cartBtn" class="btn btn-outline-dark position-relative me-2" data-bs-toggle="modal"
+          data-bs-target="#cartModal" title="عرض العربة">
+          <i class="bi bi-cart3"></i>
+          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero / Carousel -->
+  <header class="mt-5 pt-4">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="05.jpg"
+            class="d-block w-100" alt="ملابس رجالية">
+          <div class="carousel-caption d-none d-md-block text-end bg-dark bg-opacity-50 rounded px-3 py-2">
+            <h3 class="fw-bold">صيحات رجالية حديثة</h3>
+            <p>تصاميم أنيقة وجودة عالية - جملة وتجزئة</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="07.jpg"
+            class="d-block w-100" alt="ملابس نسائية">
+          <div class="carousel-caption d-none d-md-block text-end bg-dark bg-opacity-50 rounded px-3 py-2">
+            <h3 class="fw-bold">أناقة نسائية مميزة</h3>
+            <p>فساتين وعروض موسمية تناسب جميع المناسبات</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="06.jpg"
+            class="d-block w-100" alt="ملابس أطفال">
+          <div class="carousel-caption d-none d-md-block text-end bg-dark bg-opacity-50 rounded px-3 py-2">
+            <h3 class="fw-bold">الأطفال بستايل عصري</h3>
+            <p>مجموعة واسعة من الملابس المريحة والجميلة</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80"
+            class="d-block w-100" alt="أحذية">
+          <div class="carousel-caption d-none d-md-block text-end bg-dark bg-opacity-50 rounded px-3 py-2">
+            <h3 class="fw-bold">أحذية بتصاميم حديثة</h3>
+            <p>راحة وأناقة لكل الفئات</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Categories -->
+  <main class="container my-5" id="categories">
+    <h2 class="text-center mb-4 fw-bold">تسوق حسب الفئة</h2>
+
+    <div class="row g-4" id="productsGrid">
+      <!-- بطاقة منتج (مكرر بواسطة HTML ثابت هنا؛ يمكنك تكرار/تغيير الصور) -->
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="10.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة نوم</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">1,320 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة نوم"
+                  data-price="1320">أضف إلى العربة</button>
+                <a href="product01.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="08.jpg"
+            class="card-img-top" alt="ملابس نسائية">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة نوم نسائية</h5>
+            <p class="card-text text-muted mb-2">فئة: نسائي — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">1,600 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة نوم نسائية"
+                  data-price="1600">أضف إلى العربة</button>
+                <a href="product.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="09.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة نوم أطفال</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة / تجزئة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">1,320 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة نوم أطفال"
+                  data-price="1320">أضف إلى العربة</button>
+                <a href="product02.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="11.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال لولوكاتي</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">820 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال لولوكاتي"
+                  data-price="820">أضف إلى العربة</button>
+                <a href="product03.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="12.jpg"
+            class="card-img-top" alt="ملابس نسائية">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة نوم نوع 01</h5>
+            <p class="card-text text-muted mb-2">فئة: نسائي — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">1,600 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة نوم نوع 01"
+                  data-price="1600">أضف إلى العربة</button>
+                <a href="product04.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="13.jpg"
+            class="card-img-top" alt="ملابس نسائية">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة نوم نوع 02</h5>
+            <p class="card-text text-muted mb-2">فئة: نسائي — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">1,600 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة نوم نوع 02"
+                  data-price="1600">أضف إلى العربة</button>
+                <a href="product05.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="14.jpg"
+            class="card-img-top" alt="ملابس نسائية">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة نوم نوع 03</h5>
+            <p class="card-text text-muted mb-2">فئة: نسائي — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">1,600 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة نوم نوع 03"
+                  data-price="1600">أضف إلى العربة</button>
+                <a href="product06.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="15.jpg"
+            class="card-img-top" alt="ملابس نسائية">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة نوم نوع 04</h5>
+            <p class="card-text text-muted mb-2">فئة: نسائي — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">1,600 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة نوم نوع 04"
+                  data-price="1600">أضف إلى العربة</button>
+                <a href="product07.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="16.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 01</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">3,520 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 01"
+                  data-price="3520">أضف إلى العربة</button>
+                <a href="product08.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="17.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 02</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">2,970 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 02"
+                  data-price="2970">أضف إلى العربة</button>
+                <a href="product09.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="18.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 03</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">2,520 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 03"
+                  data-price="2520">أضف إلى العربة</button>
+                <a href="product10.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="19.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 04</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">2,620 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 04"
+                  data-price="2620">أضف إلى العربة</button>
+                <a href="product11.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="20.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 05</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">3,620 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 05"
+                  data-price="3620">أضف إلى العربة</button>
+                <a href="product12.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="21.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 06</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">3,520 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 06"
+                  data-price="3520">أضف إلى العربة</button>
+                <a href="product13.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="22.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 07</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">3,620 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 07"
+                  data-price="3620">أضف إلى العربة</button>
+                <a href="product14.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card h-100 product">
+          <img src="23.jpg"
+            class="card-img-top" alt="ملابس أطفال">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">بيجامة أطفال نوع 08</h5>
+            <p class="card-text text-muted mb-2">فئة: أطفال — جملة</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <strong class="text-dark">2,970 دج</strong>
+              <div>
+                <button class="btn btn-outline-dark btn-sm me-2 add-to-cart" data-name="بيجامة أطفال نوع 08"
+                  data-price="2970">أضف إلى العربة</button>
+                <a href="product15.html" class="btn btn-dark btn-sm">اطلب الآن</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- يمكنك إضافة المزيد من البطاقات هنا -->
+    </div>
+  </main>
+
+  <!-- Offers section -->
+  <section id="offers" class="py-5 text-center offers-section">
+    <div class="container">
+      <h2 class="fw-bold mb-3">عروض خاصة لهذا الأسبوع</h2>
+      <p class="mb-3 lead">خصومات مميزة على تشكيلات مختارة — شحن متوفر داخل الجزائر</p>
+      <a href="#categories" class="btn btn-gold btn-lg">تسوق الآن</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-white border-top py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-1 fw-bold">Ain Fakroun Fashion</p>
+      <p class="mb-1">📍 عين فكرون – ولاية أم البواقي</p>
+      <p class="mb-1">📞 <a href="tel:+213796349554" class="text-decoration-none text-dark">+213 796 34 95 54</a></p>
+
+      <div class="mt-2">
+        <a href="https://www.facebook.com" target="_blank" class="text-dark mx-2"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="text-dark mx-2"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="https://www.tiktok.com" target="_blank" class="text-dark mx-2"><i class="bi bi-tiktok fs-4"></i></a>
+      </div>
+
+      <p class="mt-3 mb-0 text-muted">© 2025 Ain Fakroun Fashion - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">عربة التسوق</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="اغلاق"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="cartItems" class="list-group mb-3"></ul>
+          <div class="d-flex justify-content-between">
+            <strong>المجموع:</strong>
+            <strong id="cartTotal">0 دج</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="checkoutBtn" type="button" class="btn btn-dark">إتمام الطلب</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">إغلاق</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS & dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ملف الجافاسكربت -->
+  <script src="script.js"></script>
+</body>
+</html>
